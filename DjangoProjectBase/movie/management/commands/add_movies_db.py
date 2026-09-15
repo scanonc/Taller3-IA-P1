@@ -22,9 +22,9 @@ class Command(BaseCommand):
             exist = Movie.objects.filter(title = movie['title']).first() #Se asegura que la película no exista en la base de datos
             if not exist:              
                 Movie.objects.create(title = movie['title'],
-                                     image = 'movie/images/default.jpg',
-                                     genre = movie['genre'],
-                                     year = movie['year'])        
+                                    image = 'movie/images/default.jpg',
+                                    genre = movie['genre'],
+                                    year = movie['year'])        
         
         #self.stdout.write(self.style.SUCCESS(f'Successfully added {cont} products to the database'))
                 
